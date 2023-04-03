@@ -1,0 +1,12 @@
+C:\Users\DECAGON EDO\source\repos\VacationOasis\VacationOasis.Domain\bin\Debug\net6.0\VacationOasis.Domain.deps.json
+C:\Users\DECAGON EDO\source\repos\VacationOasis\VacationOasis.Domain\bin\Debug\net6.0\VacationOasis.Domain.dll
+C:\Users\DECAGON EDO\source\repos\VacationOasis\VacationOasis.Domain\bin\Debug\net6.0\VacationOasis.Domain.pdb
+C:\Users\DECAGON EDO\source\repos\VacationOasis\VacationOasis.Domain\obj\Debug\net6.0\VacationOasis.Domain.csproj.AssemblyReference.cache
+C:\Users\DECAGON EDO\source\repos\VacationOasis\VacationOasis.Domain\obj\Debug\net6.0\VacationOasis.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DECAGON EDO\source\repos\VacationOasis\VacationOasis.Domain\obj\Debug\net6.0\VacationOasis.Domain.AssemblyInfoInputs.cache
+C:\Users\DECAGON EDO\source\repos\VacationOasis\VacationOasis.Domain\obj\Debug\net6.0\VacationOasis.Domain.AssemblyInfo.cs
+C:\Users\DECAGON EDO\source\repos\VacationOasis\VacationOasis.Domain\obj\Debug\net6.0\VacationOasis.Domain.csproj.CoreCompileInputs.cache
+C:\Users\DECAGON EDO\source\repos\VacationOasis\VacationOasis.Domain\obj\Debug\net6.0\VacationOasis.Domain.dll
+C:\Users\DECAGON EDO\source\repos\VacationOasis\VacationOasis.Domain\obj\Debug\net6.0\refint\VacationOasis.Domain.dll
+C:\Users\DECAGON EDO\source\repos\VacationOasis\VacationOasis.Domain\obj\Debug\net6.0\VacationOasis.Domain.pdb
+C:\Users\DECAGON EDO\source\repos\VacationOasis\VacationOasis.Domain\obj\Debug\net6.0\ref\VacationOasis.Domain.dll
