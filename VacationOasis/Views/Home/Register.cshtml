@@ -1,0 +1,77 @@
+﻿@model VacationOasis.Models.UserRegistrationDetails;
+@{
+    ViewData["Title"] = "Register Page";
+}
+<body>
+    <div class="container">
+        <div class="row main">
+            <div class="panel-heading">
+                <div class="panel-title text-center">
+                    <h1 class="title">StayCation</h1>
+                    <hr />
+                </div>
+            </div>
+            <div class="main-login main-center">
+                <form autocomplete="off" class="form-horizontal" method="post" asp-action="Register">
+                    <div class="form-group">
+                        <label for="name" class="cols-sm-2 control-label">First Name</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                <input asp-for="FirstName" type="text" class="form-control" id="name" placeholder="Enter your First Name" /><br />
+                                <span asp-validation-for="FirstName" style="color:red"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="cols-sm-2 control-label">Last Name</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                <input asp-for="LastName" type="text" class="form-control" id="name" placeholder="Enter your Name" />
+                                <span asp-validation-for="LastName" style="color:red"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="cols-sm-2 control-label">Your Email</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                <input asp-for="Email" type="text" class="form-control" id="email" placeholder="Enter your Email" /><br />
+                                <span asp-validation-for="Email" style="color:red"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="cols-sm-2 control-label">Password</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                <input asp-for="Password" type="password" class="form-control" name="password" id="password" placeholder="Enter your Password" />
+                                <span asp-validation-for="Password" style="color:red"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                <input asp-for="RetypePassword" type="password" class="form-control" id="confirm" placeholder="Confirm your Password" />\
+                                <span asp-validation-for="RetypePassword" style="color:red"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <button type="submit" class="btn btn-primary btn-lg btn-block login-button">Register</button>
+                    </div>
+                    <div class="login-register">
+                        <a href="index.php">Login</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+@*</html>*@

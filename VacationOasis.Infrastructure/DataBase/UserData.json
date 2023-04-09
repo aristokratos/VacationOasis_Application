@@ -1,3 +1,38 @@
-{
-
-}
+[
+  {
+    "UserId": "cf53e3f9-de55-4462-a0b9-502eb6c63868",
+    "FirstName": "Dorcas",
+    "LastName": "Agwogie",
+    "Email": "dorcasuyi@gmail.com",
+    "Password": "15e2b0d3c33891ebb0f1ef609ec419420c20e320ce94c65fbc8c3312448eb225",
+    "FullName": "Dorcas Agwogie",
+    "created": "2022-08-21T23:50:23.5730942+01:00"
+  },
+  {
+    "UserId": "afc952d0-8deb-44ca-8417-a222959c1f42",
+    "FirstName": "Dorcas",
+    "LastName": "Agwogie",
+    "Email": "dorcas@gmail.com",
+    "Password": "9200051244fbf2e1d980076af6c3bb067c06ea1ec721f61c5e7115ef5dc2e352",
+    "FullName": "Dorcas Agwogie",
+    "created": "2022-08-22T10:25:11.2030458+01:00"
+  },
+  {
+    "UserId": "421f7a5e-7a90-46f4-bda8-8f4cd4b3bb6b",
+    "FirstName": "Chinedu",
+    "LastName": "Otuka",
+    "Email": "chineduotuka@gmail.com",
+    "Password": "15e2b0d3c33891ebb0f1ef609ec419420c20e320ce94c65fbc8c3312448eb225",
+    "FullName": "Chinedu Otuka",
+    "created": "2022-08-22T22:27:42.1552667+01:00"
+  },
+  {
+    "UserId": "e7b8639a-965c-4eac-b4bc-747c133d3367",
+    "FirstName": "Dorcas",
+    "LastName": "Agwogie",
+    "Email": "dorcas10@gmail.com",
+    "Password": "9200051244fbf2e1d980076af6c3bb067c06ea1ec721f61c5e7115ef5dc2e352",
+    "FullName": "Dorcas Agwogie",
+    "created": "2022-08-24T10:23:51.8624215+01:00"
+  }
+]

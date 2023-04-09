@@ -13,5 +13,6 @@ namespace VacationOasis.Infrastructure.IRepository
         Task<List<User>> GetAllLogin();
        // Task<User> Login(string Email,  string Password);
         Task<User> Login(string email, byte[] passwordHash);
+        Task<User> GetUserByEmail(string email);
     }
 }

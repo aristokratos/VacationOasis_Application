@@ -1,8 +1,162 @@
-﻿@{
+﻿@model IEnumerable<VacationOasis.Core.Dtos.HotelDtos.HotelModelDTO>
+@{
     ViewData["Title"] = "Home Page";
 }
-
-<div class="text-center">
+@*<div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+*@
+<div>
+    <div class="first--flex displayFlex">
+        <div class="first--flex__left">
+            <h2 class="h2style">Forget Busy Work,<br />Start Next Vacation</h2>
+            <p class="ph2style">We provide what you need to enjoy your<br /> holiday with family. Time to make another<br /> memorable moments.</p>
+            <button class="first--flex__button">show me now</button>
+            <div class="miniPics--flex displayFlex">
+                <div>
+                    <img src="~/hOTEL iMAGES/ic_traveler (1) 1.svg" alt="ic-traveler" />
+                    <p class="travelerPtag">80,409<span class="travelerSpan">traveler</span></p>
+                </div>
+                <div>
+                    <img src="~/hOTEL iMAGES/ic_treasure 1.svg" alt="ic-traveler" />
+                    <p class="treasurePtag">862<span class="treasureSpan">treasure</span></p>
+                </div>
+                <div>
+                    <img src="~/hOTEL iMAGES/ic_cities 1.svg" alt="ic-cities" />
+                    <p class="citiesPtag">1,492<span class="citiesSpan">cities</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="first--flex__right">
+            <img class="image--style" src="~/hOTEL iMAGES/FirstImageright.png" alt="image of house" />
+        </div>
+    </div>
+    <div class="second--main">
+        <h3>Most Picked</h3>
+        <div class="second--flex__right displayFlex">
+            @foreach (var hotel in Model)
+            {
+                if (hotel.HotelImageId == 1)
+                {
+                    <div>
+                        <a asp-controller="Home" asp-action="Details" asp-route-Id="@hotel.HotelImageId"><img class="imagestyle_1" src="~/hOTEL iMAGES/BlueOriginFams.png" alt="image of house1" /></a>
+                        <a asp-controller="Home" asp-action="Details" asp-route-Id="@hotel.HotelImageId"><div class="BlueOriginFams">$50 <span class="spanj5">per night</span></div></a>
+                        <p class="BlueOriginFams1">Blue Origin Fams<br /><span class="Medan">Jakarta, Indonesia</span></p>
+                    </div>
+                }
+            }
+            <div class="nested displayGrid">
+                @foreach (var hotel in Model)
+                {
+                    @if (hotel.HotelImageCategory == "Most Picked" && hotel.HotelImageId != 1)
+                    {
+                        <div>
+                            <a asp-controller="Home" asp-action="Details" asp-route-Id="@hotel.HotelImageId"><img class="imagestyle_2" src="@hotel.HotelImage" alt="image of house2" /></a>
+                            <a asp-controller="Home" asp-action="Details" asp-route-Id="@hotel.HotelImageId"><div class="@hotel.HotelImageStyle">$@hotel.HotelImagePrice <span class="spanj5">per night</span></div></a>
+                            <p class="@hotel.HotelImageStyle1">@hotel.HotelImageName<br /><span class="Medan">@hotel.HotelImageLocation</span></p>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+    <div class="Third--main DisplayPaddingTop">
+        <h3>Houses with beauty backyard</h3>
+        <div class="Third--flex__right displayFlex DisplayFlex-Spacebetween">
+            @foreach (var hotel in Model)
+            {
+                @if (hotel.HotelImageCategory == "Houses with beauty backyard")
+                {
+                    <div>
+                        @if (hotel.IsPopular == true)
+                        {
+                            <a asp-controller="Home" asp-action="Details" asp-route-Id="@hotel.HotelImageId"><img src="@hotel.HotelImage" alt="image of garden" /></a>
+                            <div class="third__flex--tag1">Popular<span class="spanj5">Choice</span></div>
+                            <a asp-controller="Home" asp-action="Details" asp-route-Id="@hotel.HotelImageId"><div class="Tabby">@hotel.HotelImageName</div></a>
+                            <a asp-controller="Home" asp-action="Details" asp-route-Id="@hotel.HotelImageId"><div class="gunung">@hotel.HotelImageLocation</div></a>
+                        }
+                        else
+                        {
+                            <a asp-controller="Home" asp-action="Details" asp-route-Id="@hotel.HotelImageId"><img src="@hotel.HotelImage" alt="image of garden" /></a>
+                            <a asp-controller="Home" asp-action="Details" asp-route-Id="@hotel.HotelImageId"><div class="Tabby">@hotel.HotelImageName</div></a>
+                            <a asp-controller="Home" asp-action="Details" asp-route-Id="@hotel.HotelImageId"><div class="gunung">@hotel.HotelImageLocation</div></a>
+                        }
+                    </div>
+                }
+            }
+        </div>
+    </div>
+    <div class="fourt--main DisplayPaddingTop">
+        <h3>Hotels with large living room</h3>
+        <div class="Third--flex__right displayFlex DisplayFlex-Spacebetween">
+            @foreach (var hotel in Model)
+            {
+                @if (hotel.HotelImageCategory == "Hotels with large living room")
+                {
+                    <div>
+                        @if (hotel.IsPopular == true)
+                        {
+                            <a asp-controller="Home" asp-action="Details" asp-route-Id="@hotel.HotelImageId"><img src="@hotel.HotelImage" alt="image of garden" /></a>
+                            <div class="fourth__flex--tag1">Popular<span class="spanj5">Choice</span></div>
+                            <a asp-controller="Home" asp-action="Details" asp-route-Id="@hotel.HotelImageId"><div class="Tabby">@hotel.HotelImageName</div></a>
+                            <a asp-controller="Home" asp-action="Details" asp-route-Id="@hotel.HotelImageId"><div class="gunung">@hotel.HotelImageLocation</div></a>
+                        }
+                        else
+                        {
+                            <a asp-controller="Home" asp-action="Details" asp-route-Id="@hotel.HotelImageId"><img src="@hotel.HotelImage" alt="image of garden" /></a>
+                            <a asp-controller="Home" asp-action="Details" asp-route-Id="@hotel.HotelImageId"><div class="Tabby">@hotel.HotelImageName</div></a>
+                            <a asp-controller="Home" asp-action="Details" asp-route-Id="@hotel.HotelImageId"><div class="gunung">@hotel.HotelImageLocation</div></a>
+                        }
+                    </div>
+                }
+            }
+        </div>
+    </div>
+    <div class="fifth--main DisplayPaddingTop">
+        <h3>Apartments with kitchen set</h3>
+        <div class="Third--flex__right displayFlex DisplayFlex-Spacebetween">
+            @foreach (var hotel in Model)
+            {
+                @if (hotel.HotelImageCategory == "Apartments with kitchen set")
+                {
+                    <div>
+                        @if (hotel.IsPopular == true)
+                        {
+                            <a asp-controller="Home" asp-action="Details" asp-route-Id="@hotel.HotelImageId"><img src="@hotel.HotelImage" alt="image of garden" /></a>
+                            <a asp-controller="Home" asp-action="Details" asp-route-Id="@hotel.HotelImageId"><div class="fifth__flex--tag1">Popular<span class="spanj5">Choice</span></div></a>
+                            <a asp-controller="Home" asp-action="Details" asp-route-Id="@hotel.HotelImageId"><div class="Tabby">@hotel.HotelImageName</div></a>
+                            <a asp-controller="Home" asp-action="Details" asp-route-Id="@hotel.HotelImageId"><div class="gunung">@hotel.HotelImageLocation</div></a>
+                        }
+                        else
+                        {
+                            <a asp-controller="Home" asp-action="Details" asp-route-Id="@hotel.HotelImageId"><img src="@hotel.HotelImage" alt="image of garden" /></a>
+                            <a asp-controller="Home" asp-action="Details" asp-route-Id="@hotel.HotelImageId"><div class="Tabby">@hotel.HotelImageName</div></a>
+                            <a asp-controller="Home" asp-action="Details" asp-route-Id="@hotel.HotelImageId"><div class="gunung">@hotel.HotelImageLocation</div></a>
+                        }
+                    </div>
+                }
+            }
+        </div>
+    </div>
+    <div class="sixth--main DisplayPaddingTop">
+        <div class="Third--flex__right displayFlex">
+            <div>
+                <img class="familyPic" src="~/hOTEL iMAGES/HappyFamily.png" alt="image of garden" />
+            </div>
+            <div>
+                <h3 class="h3style">Happy Family</h3>
+                <div class="starDiv displayFlex">
+                    <img src="~/hOTEL iMAGES/Star 1.svg" alt="star image" />
+                    <img src="~/hOTEL iMAGES/Star 1.svg" alt="star image" />
+                    <img src="~/hOTEL iMAGES/Star 1.svg" alt="star image" />
+                    <img src="~/hOTEL iMAGES/Star 1.svg" alt="star image" />
+                    <img src="~/hOTEL iMAGES/Star 1.svg" alt="star image" />
+                </div>
+                <h4 class="h4style">What a great trip with my family and <br />I should try again next time soon ...</h4>
+                <p class="p4style">Angga, Product Designer</p>
+                <button class="btn2">Read thier story</button>
+            </div>
+        </div>
+    </div>
 </div>

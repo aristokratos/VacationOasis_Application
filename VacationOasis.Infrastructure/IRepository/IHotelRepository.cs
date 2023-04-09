@@ -11,7 +11,8 @@ namespace VacationOasis.Infrastructure.IRepository
     {
         Task<List<Hotel>> GetAllHotel();
         Task<Hotel> GetHotelById(int id);
-        Task<List<string[]>> GetAllImageUrl();
+        Task<List<string[]>> GetImageUrlByIdAsync();
         Task<string[]> GetImageById(string HouseId);
+       // Task<string[]> GetImageById(int HouseId);
     }
 }
