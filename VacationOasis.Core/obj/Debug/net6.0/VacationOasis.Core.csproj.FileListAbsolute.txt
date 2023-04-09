@@ -15,3 +15,5 @@ C:\Users\DECAGON EDO\source\repos\VacationOasis\VacationOasis.Core\obj\Debug\net
 C:\Users\DECAGON EDO\source\repos\VacationOasis\VacationOasis.Core\obj\Debug\net6.0\refint\VacationOasis.Core.dll
 C:\Users\DECAGON EDO\source\repos\VacationOasis\VacationOasis.Core\obj\Debug\net6.0\VacationOasis.Core.pdb
 C:\Users\DECAGON EDO\source\repos\VacationOasis\VacationOasis.Core\obj\Debug\net6.0\ref\VacationOasis.Core.dll
+C:\Users\DECAGON EDO\source\repos\VacationOasis\VacationOasis.Core\bin\Debug\net6.0\VacationOasis.Core.runtimeconfig.json
+C:\Users\DECAGON EDO\source\repos\VacationOasis\VacationOasis.Core\obj\Debug\net6.0\VacationOasis.Core.genruntimeconfig.cache

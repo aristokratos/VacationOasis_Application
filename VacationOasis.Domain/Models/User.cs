@@ -27,6 +27,8 @@ namespace VacationOasis.Domain.Models
         public string FullName { get; set; }
         public DateTime created { get; set; } = DateTime.Now;
         public DateTime updated { get; set; }
+        public string PasswordSalt { get; set; }
+        public string PasswordHash { get; set; }
 
         public User(string Email, string Password, string FirstName, string LastName)
         {

@@ -17,7 +17,7 @@ namespace VacationOasis.Infrastructure.Repository
 
         public UserRepository(IConfiguration configuration)
         {
-            _connectionString = configuration.GetConnectionString("DefaultConnection");
+            _connectionString = configuration.GetConnectionString("VacationOasisConnectionString");
         }
 
         public async Task<bool> Register(User user)
@@ -83,6 +83,35 @@ namespace VacationOasis.Infrastructure.Repository
 
             string passwordHashString = BitConverter.ToString(passwordHash).Replace("-", "");
             return users.FirstOrDefault(x => x.Email == email && x.Password == passwordHashString);
+        }
+
+        public async Task<User> GetUserByEmail(string email)
+        {
+            using var connection = new SqlConnection(_connectionString);
+            await connection.OpenAsync();
+
+            using var command = new SqlCommand("SELECT * FROM Users WHERE Email = @Email", connection);
+            command.Parameters.AddWithValue("@Email", email);
+
+            using var reader = await command.ExecuteReaderAsync();
+
+            if (await reader.ReadAsync())
+            {
+                var user = new User(
+                    reader.GetString("Email"),
+                    reader.GetString("Password"),
+                    reader.GetString("FirstName"),
+                    reader.GetString("LastName")
+                )
+                {
+                    UserId = reader.GetString("UserId"),
+                    created = reader.GetDateTime("DateCreated"),
+                    FullName = reader.GetString("FullName")
+                };
+                return user;
+            }
+
+            return null;
         }
 
 
